@@ -1,0 +1,29 @@
+{
+  "name": "reusable_workflow_caller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdpauw/reusable_workflow_caller.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tdpauw/reusable_workflow_caller/issues"
+  },
+  "homepage": "https://github.com/tdpauw/reusable_workflow_caller#readme",
+  "volta": {
+    "node": "20.18.0"
+  }
+}
