@@ -9,4 +9,4 @@ on:
 
 jobs:
   pipeline:
-    uses: tdpauw/reusable_workflows/pipeline.yml@main
+    uses: tdpauw/reusable_workflows/.github/workflows/pipeline.yml@main
