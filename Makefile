@@ -14,4 +14,4 @@ test: ## Executes unit tests
 	npm test
 
 build: clean install compile test ## Builds
-	$(notice "Build complete! at version $(version)")
+	$(info "Build complete! at version $(version)")
