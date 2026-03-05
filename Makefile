@@ -2,10 +2,6 @@ SHELL := /bin/bash
 .DEFAULT_GOAL := help
 .PHONY: clean help install compile test build
 
-ifdefn version
-	$(info "no version provided"	)
-endif
-
 help:
 	@grep -h -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
@@ -18,4 +14,7 @@ test: ## Executes unit tests
 	npm test
 
 build: clean install compile test ## Builds
+ifndef version
+	$(info "no version provided")
+endif
 	$(info "Build complete! at version $(version)")
