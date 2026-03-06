@@ -19,11 +19,11 @@ build: clean install compile test ## Builds
 	@if [[ -z "${version}" ]]; then echo "version must be provided"; false; fi;
 	@echo "Build complete! at version $(version)"
 
-check:
+pre-deploy-validation:
 	@if [[ -z "${env}" ]]; then echo "env must be provided"; false; fi
 	@if [[ ! "${env}" =~ ${envs} ]]; then echo "env must be one of ${envs}"; false; fi
 	@if [[ -z "${version}" ]]; then echo "version must be provided"; false; fi
 
-deploy: check ## Deploys to an environment
+deploy: pre-deploy-validation ## Deploys to an environment
   # call deploy script
 	@echo "Deploying version ${version} to environment ${env}"
