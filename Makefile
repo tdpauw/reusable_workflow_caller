@@ -20,7 +20,7 @@ build: clean install compile test ## Builds
 	@echo "Build complete! at version $(version)"
 
 check:
-	@if [[ -z "${env}" ]]; then echo "env must be provided and be one of ${envs}"; false; fi
+	@if [[ -z "${env}" ]]; then echo "env must be provided"; false; fi
 	@if [[ ! "${env}" =~ ${envs} ]]; then echo "env must be one of ${envs}"; false; fi
 	@if [[ -z "${version}" ]]; then echo "version must be provided"; false; fi
 
