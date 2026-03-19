@@ -17,6 +17,7 @@ test: install ## Executes unit tests
 
 build: clean install compile test ## Builds
 	@if [[ -z "${version}" ]]; then echo "version must be provided"; false; fi;
+	@echo "Value of A_SECRET: ${CICD_A_SECRET}"
 	@echo "Build complete! at version $(version)"
 
 pre-deploy-validation:
