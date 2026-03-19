@@ -17,7 +17,7 @@ test: install ## Executes unit tests
 
 build: clean install compile test ## Builds
 	@if [[ -z "${version}" ]]; then echo "version must be provided"; false; fi;
-	@echo "Value of A_SECRET: ${CICD_A_SECRET}"
+	@echo "Value of A_SECRET: ${A_SECRET}"
 	@echo "Value of A_VAR: ${A_VAR}"
 	@echo "Build complete! at version $(version)"
 
