@@ -10,5 +10,4 @@ on:
 jobs:
   pipeline:
     uses: tdpauw/reusable_workflows/.github/workflows/pipeline.yml@main
-    secrets:
-      A_SECRET: ${{ secrets.A_SECRET }}
+    secrets: inherit
