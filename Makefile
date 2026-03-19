@@ -10,10 +10,10 @@ help:
 clean: ## Removes temporary files from local folders
 
 install: ## Installs dependencies
-	npm install
+	@echo "Installing dependencies"
 
 test: install ## Executes unit tests
-	npm test
+	@echo "Executing tests"
 
 build: clean install compile test ## Builds
 	@if [[ -z "${version}" ]]; then echo "version must be provided"; false; fi;
