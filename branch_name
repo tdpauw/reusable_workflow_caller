@@ -1,0 +1,6 @@
+#!/bin/bash
+commit_subject=$(git log -1 --pretty=format:%s)
+echo Commit subject: $commit_subject
+
+branch_name=$(echo $commit_subject | sed -E 's/Merge pull request #[0-9]+ from [^/ ]+\/([^ ]+)$/\1/')
+echo Merged branch: $branch_name
